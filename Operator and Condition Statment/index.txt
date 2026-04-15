@@ -1,0 +1,46 @@
+this folder contain 10 simple task related to conditional statment just 
+ if , else if , if
+
+ and one mini project and the project is
+
+ /*
+PROJECT: Login System with Dashboard (Frontend Mini Project)
+
+You are building a simple authentication system using HTML, CSS, and JavaScript.
+
+-------------------------------------
+FEATURES REQUIRED:
+
+1. Login Form:
+   - Input for username
+   - Input for password
+   - Login button
+
+2. Validation Rules:
+   - If username OR password is empty
+     → show alert: "PLEASE FILL ALL FIELDS"
+
+   - If username is "admin" AND password is "1234"
+     → hide login form
+     → show dashboard
+
+   - Otherwise
+     → show alert: "INVALID CREDENTIALS"
+
+3. Dashboard:
+   - Initially hidden
+   - After successful login, display:
+     "WELCOME ADMIN"
+
+-------------------------------------
+TECH REQUIREMENTS:
+- Use HTML for structure
+- Use CSS for styling
+- Use JavaScript for logic
+- Use if / else conditions
+- Use DOM manipulation
+
+-------------------------------------
+GOAL:
+Understand how real login systems control UI state (show/hide elements).
+*/
