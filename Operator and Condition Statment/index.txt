@@ -1,5 +1,5 @@
 this folder contain 10 simple task related to conditional statment just 
- if , else if , if
+ if , else if , else
 
  and one mini project and the project is
 
