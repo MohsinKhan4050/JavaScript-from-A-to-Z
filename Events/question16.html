@@ -1,0 +1,105 @@
+<!--
+
+// Task 13:
+// Create one button and one h1.
+
+// The h1 should start with:
+// "Level 1"
+
+// Create an array:
+
+// ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5"]
+
+// Every click should:
+
+// 1. Show the next level.
+// 2. Change the color of the h1.
+
+// Level 1 → gray
+// Level 2 → green
+// Level 3 → blue
+// Level 4 → orange
+// Level 5 → red
+
+// After Level 5:
+// Start again from Level 1.
+
+// Use:
+// - one array for levels
+// - one array for colors
+// - one counter variable
+// - one click event
+
+// Bonus:
+// Change the button text to:
+// "Next Level (2)"
+// "Next Level (3)"
+// etc.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="heading">Level 1</h1>
+    <button class="btn">Change Level</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let btn = document.querySelector(".btn");
+
+        let Levels = ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5"];
+        let count = 1;
+
+        btn.addEventListener("click", () => {
+            heading.innerText = Levels[count];
+
+            if (Levels[count] === "Level 1") {
+                heading.style.color = "gray";
+                btn.innerText = "next level 2"
+            }
+
+            else if (Levels[count] === "Level 2") {
+                heading.style.color = "green";
+                btn.innerText = "next level 3";
+            }
+
+
+            else if (Levels[count] === "Level 3") {
+                heading.style.color = "blue";
+                btn.innerText = "next level 4";
+            }
+
+
+            else if (Levels[count] === "Level 4") {
+                heading.style.color = "orange";
+                btn.innerText = "next level 5";
+            }
+
+
+            else if (Levels[count] === "Level 5") {
+                heading.style.color = "red";
+                btn.innerText = "next level 1";
+            }
+
+            count++;
+
+            if (count >= Levels.length) {
+                count = 0;
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

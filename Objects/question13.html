@@ -1,0 +1,80 @@
+<!--
+
+Task 13:
+Create an object named "bankAccount".
+
+The object should have:
+
+owner: "Mohsin"
+balance: 1000
+
+Also add two methods:
+
+deposit
+withdraw
+
+The deposit method should add 500 to the balance.
+
+The withdraw method should subtract 200 from the balance.
+
+Perform the following actions:
+
+1. Print the object.
+2. Call the deposit method.
+3. Print the balance.
+4. Call the withdraw method.
+5. Print the balance again.
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Methods
+- this keyword
+- Property update
+
+Hint:
+
+this.balance += 500;
+
+this.balance -= 200;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let bankAccount = {
+            owner: "Mohsin",
+            balance: 1000,
+
+            deposit: function () {
+                this.balance += 500;
+            },
+
+            withdraw: function () {
+                this.balance -= 200;
+            }
+        }
+        console.log(bankAccount);
+
+        bankAccount.deposit();
+        console.log(bankAccount.balance);
+
+        bankAccount.withdraw();
+        console.log(bankAccount.balance);
+        
+        console.log(bankAccount);
+    </script>
+</body>
+
+</html>

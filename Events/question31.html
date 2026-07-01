@@ -1,0 +1,63 @@
+<!--
+
+// Task 29
+
+// Create:
+
+// 1 input
+// 1 h1
+
+// h1 starts with:
+// "Your name will appear here"
+
+// As the user types:
+
+// If the input is empty:
+// Show:
+// "Please enter your name"
+
+// Otherwise:
+// Show whatever the user typed.
+
+// IMPORTANT:
+// Use:
+//
+// e.target.value
+//
+// Don't use:
+//
+// input.value
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="inputFeild">
+    <h1 class="heading">Your name will appear here</h1>
+
+    <script>
+
+        let input = document.querySelector(".inputFeild");
+        let heading = document.querySelector(".heading");
+
+        input.addEventListener("input", (e) => {
+
+            if (e.target.value === "") {
+                heading.innerText = "Please enter your name"
+            }
+            else {
+                heading.innerText = e.target.value;
+            }
+        })
+    </script>
+</body>
+
+</html>

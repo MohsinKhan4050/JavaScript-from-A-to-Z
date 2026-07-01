@@ -1,0 +1,71 @@
+<!--
+
+Task 22:
+
+Create an object named "user".
+
+The object should have:
+
+name: "Mohsin"
+age: 20
+country: "Pakistan"
+
+Now create a variable:
+
+let key = "country";
+
+Perform these actions:
+
+1. Print the complete object.
+2. Print the name using dot notation.
+3. Print the country using bracket notation and the variable "key".
+4. Change the value of "country" to "Canada" using bracket notation.
+5. Print the updated country.
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Bracket notation
+- Variable as a property name
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let user = {
+            name: "Mohsin",
+            age: 20,
+            country: "Pakistan",
+        }
+
+        let key = "country";
+
+        console.log(user);
+
+        console.log(user.name);
+
+        console.log(user[key]);
+
+        user[key] = "Canada";
+
+        console.log(user[key]);
+
+        console.log(user);
+
+
+    </script>
+</body>
+
+</html>

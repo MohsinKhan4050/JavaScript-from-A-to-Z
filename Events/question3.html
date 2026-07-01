@@ -1,0 +1,67 @@
+<!-- 
+
+// Task 2:
+// Create a button and a div using HTML
+
+// Now do this:
+
+// 1. Select button and div
+// 2. Add click event on button
+// 3. Every click should:
+//    - Change div background color
+//    - First click → red
+//    - Second click → blue
+//    - Third click → orange
+//    - Fourth click → purple
+// 4. After purple, start again from red
+// 5. Use an array and a counter variable
+ 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <button class="btn">Click me</button>
+
+
+    <script>
+        let box = document.querySelector(".box");
+        let btn = document.querySelector(".btn");
+
+        let colors = ["red", "blue", "orange", "purple"];
+        let count = 0;
+        console.log(colors.length)
+
+        btn.addEventListener("click", () => {
+
+            box.style.background = colors[count];
+            count++;
+
+            if (count === colors.length) {
+                count = 0;
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

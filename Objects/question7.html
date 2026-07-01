@@ -1,0 +1,58 @@
+<!--
+
+Task 7:
+Create an object named "user".
+
+The object should have:
+
+username: "mohsin"
+email: "mohsin@gmail.com"
+isLoggedIn: true
+
+Perform the following actions:
+
+1. Print the email.
+2. Change isLoggedIn to false.
+3. Add a new property:
+   role: "admin"
+4. Check whether role exists in the object.
+5. Check whether password exists in the object.
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Property update
+- Adding properties
+- in operator
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let user = {
+            username: "mohsin",
+            email: "mohsin@gmail.com",
+            isLoggedIn: true,
+        }
+
+        console.log(user.email);
+        user.isLoggedIn = false;
+        user.role = "admin"
+        console.log("role" in user);
+        console.log("password" in user);
+        console.log(user)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!--
+
+// Task 11:
+// Create one button and one h1.
+
+// The h1 should start with:
+// "OFF"
+
+// Now do this:
+
+// 1. Create an array:
+
+// ["OFF", "ON"]
+
+// 2. Add a click event on the button.
+
+// 3. Every click should:
+
+// First click:
+//    h1 shows "ON"
+//    h1 color becomes green
+
+// Second click:
+//    h1 shows "OFF"
+//    h1 color becomes red
+
+// Third click:
+//    h1 shows "ON"
+//    h1 color becomes green
+
+// Fourth click:
+//    h1 shows "OFF"
+//    h1 color becomes red
+
+// ...and so on.
+
+// 4. Use:
+//    - an array
+//    - a counter variable
+//    - one click event
+//    - one if statement
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">OFF</h1>
+    <button class="btn">Change state</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let button = document.querySelector(".btn");
+
+        let status = ["OFF", "ON"];
+        let count = 1;
+
+        button.addEventListener("click", () => {
+
+            heading.innerText = status[count];
+
+            if (status[count] === "ON") {
+                heading.style.color = "green";
+            }
+            else {
+                heading.style.color = "red";
+            }
+            count++;
+
+
+            if (count >= status.length) {
+                count = 0;
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

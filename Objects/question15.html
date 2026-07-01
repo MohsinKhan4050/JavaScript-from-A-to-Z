@@ -1,0 +1,74 @@
+<!--
+
+Task 15:
+Create an object named "person".
+
+The object should have:
+
+name: "Mohsin"
+
+Also add a method named:
+
+sayHello
+
+The method should accept one parameter:
+
+friendName
+
+When the method is called, it should print:
+
+Hello Ahmed, I am Mohsin
+
+Perform the following actions:
+
+1. Print the object.
+2. Call the method with:
+   "Ahmed"
+
+3. Call the method with:
+   "Ali"
+
+Use:
+- Object literal {}
+- Method
+- Parameter
+- this keyword
+
+Hint:
+
+console.log("Hello", friendName, ", I am", this.name);
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let person = {
+            name: "Mohsin",
+            sayHello: function (friendName) {
+
+                console.log("Hello", friendName, ", I am ", this.name)
+
+            }
+        }
+
+        console.log(person);
+
+        person.sayHello("Ahmed");
+        person.sayHello("Ali");
+
+    </script>
+</body>
+
+</html>

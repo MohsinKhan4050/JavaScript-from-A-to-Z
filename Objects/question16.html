@@ -1,0 +1,75 @@
+<!--
+
+Task 16:
+Create an object named "user".
+
+The object should have:
+
+name: "Mohsin"
+age: 20
+
+Add a method named:
+
+updateAge
+
+The method should accept one parameter:
+
+newAge
+
+Inside the method:
+
+1. Update the object's age using the parameter.
+2. Print the updated age.
+
+Perform the following actions:
+
+1. Print the object.
+2. Call updateAge with:
+   25
+
+3. Print the object again.
+
+Use:
+- Object literal {}
+- Method
+- Parameter
+- this keyword
+- Property update
+
+Hint:
+
+this.age = newAge;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let user = {
+            name: "Mohsin",
+            age: 20,
+            updateAge: function (newAge) {
+
+                this.age = newAge;
+                console.log(this.age)
+
+            }
+        }
+        console.log(user);
+        user.updateAge(25);
+        console.log(user);
+    </script>
+</body>
+
+</html>

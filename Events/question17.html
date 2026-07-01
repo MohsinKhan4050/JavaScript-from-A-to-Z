@@ -1,0 +1,81 @@
+<!--
+
+// Task 14:
+// Create one button and one h1.
+
+// The h1 starts with:
+// "😀 Happy"
+
+// Create two arrays:
+
+// let moods = [
+//   "😀 Happy",
+//   "😴 Sleepy",
+//   "😡 Angry",
+//   "😎 Cool",
+//   "🤔 Thinking"
+// ];
+
+// let colors = [
+//   "green",
+//   "gray",
+//   "red",
+//   "blue",
+//   "purple"
+// ];
+
+// Every click should:
+
+// 1. Change the mood text.
+// 2. Change the color.
+// 3. After the last mood, start again from the first mood.
+
+// IMPORTANT:
+// Do NOT use if/else if.
+
+// Use:
+// - 2 arrays
+// - 1 counter
+// - 1 click event
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="heading">"😀 Happy"</h1>
+    <button class="btn">Change mode</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let btn = document.querySelector(".btn");
+
+        let moods = ["😀 Happy", "😴 Sleepy", "😡 Angry", "😎 Cool", "🤔 Thinking"];
+        let colors = ["green", "gray", "red", "blue", "purple"];
+
+        let count = 1;
+
+        btn.addEventListener("click", () => {
+
+            heading.innerText = moods[count];
+            heading.style.color = colors[count];
+            count++;
+
+            if (count >= moods.length) {
+                count = 0;
+            }
+
+        })
+    </script>
+</body>
+
+</html>

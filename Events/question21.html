@@ -1,0 +1,82 @@
+<!--
+
+// Task 18:
+// Create:
+
+// 1 button
+// 1 h1
+
+// The h1 should start with:
+// "Light Mode"
+
+// When the button is clicked:
+
+// If it says "Light Mode":
+//     Change it to "Dark Mode"
+
+// Otherwise:
+//     Change it back to "Light Mode"
+
+// Use:
+// - one click event
+// - one boolean variable
+
+// Example:
+
+// Initial:
+// Light Mode
+
+// Click 1:
+// Dark Mode
+
+// Click 2:
+// Light Mode
+
+// Click 3:
+// Dark Mode
+
+// Click 4:
+// Light Mode
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">Light Mode</h1>
+    <button class="btn">Change Mode</button>
+
+    <script>
+        let heading = document.querySelector(".heading");
+        let button = document.querySelector(".btn");
+
+        let mode = "light";
+
+        button.addEventListener("click", () => {
+
+            if (mode === "light") {
+                heading.innerText = "Dark Mode";
+                heading.style.color = "white";
+                document.body.style.background = "black";
+                mode = "dark";
+            }
+            else {
+                heading.innerText = "Light Mode";
+                heading.style.color = "black";
+                document.body.style.background = "white";
+                mode = "light";
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

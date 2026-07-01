@@ -1,0 +1,72 @@
+<!--
+
+Task 19:
+
+Create an object named "rectangle".
+
+The object should have:
+
+width: 10
+height: 5
+
+Add one method:
+
+getArea()
+
+Rules:
+
+1. The method should return:
+   width × height
+
+Perform the following actions:
+
+1. Print the object.
+2. Store the returned value in a variable named area.
+3. Print the area.
+4. Print the object again.
+
+Use:
+- Object literal {}
+- Method
+- this keyword
+- return
+
+Hint:
+
+return this.width * this.height;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let rectangle = {
+            width: 10,
+            height: 5,
+            getArea: function () {
+
+                return this.width * this.height;
+            },
+        };
+
+        console.log(rectangle);
+        let area = rectangle.getArea();
+        console.log(area);
+        console.log(rectangle);
+
+
+    </script>
+</body>
+
+</html>

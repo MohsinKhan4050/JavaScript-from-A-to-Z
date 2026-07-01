@@ -1,0 +1,46 @@
+<!--
+
+// Create:
+
+// 1 input
+// 1 h1
+
+// h1 should start with:
+// "Press Any Key"
+
+// When the user presses ANY key inside the input:
+
+// Change the h1 text to:
+// "Key Pressed!"
+
+// Use:
+// - keydown event
+// - one event listener
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="input-box">
+    <h1 class="heading">Press Any Key</h1>
+
+    <script>
+        let inputFeild = document.querySelector(".input-box");
+        let heading = document.querySelector(".heading");
+
+        inputFeild.addEventListener("keydown", () => {
+            heading.innerText = "Key Pressed!";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!--
+
+// Task 4:
+// Create an input field and an h2
+
+// Now do this:
+
+// 1. Select input and h2
+
+// 2. Add a keyboard event on input
+//    Use: "keyup"
+
+// 3. Whenever user types:
+//    - Show live text inside h2
+
+// Example:
+
+// Input: Mohsin
+// h2 Output: Mohsin
+
+// Input: JavaScript
+// h2 Output: JavaScript
+
+// 4. If input becomes empty:
+//    Show "Start Typing..."
+
+// Rules:
+
+// - Use addEventListener()
+// - Use input.value
+// - Do NOT use button
+// - Text should update automatically while typing
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="box">
+    <h2 class="heading"></h2>
+
+    <script>
+        let inputBox = document.querySelector(".box");
+        let heading = document.querySelector(".heading");
+
+        inputBox.addEventListener("keyup", () => {
+
+            let userName = inputBox.value;
+
+            if (userName === "") {
+                heading.innerText = "Start Typing";
+            }
+            else {
+                heading.innerText = userName;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

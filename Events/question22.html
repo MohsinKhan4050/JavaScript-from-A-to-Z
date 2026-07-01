@@ -1,0 +1,60 @@
+<!--
+
+// Task 19:
+// Create an input and an h1.
+
+// The h1 should initially show:
+// "Start Typing..."
+
+// When the user types in the input:
+
+// Whatever they type should appear inside the h1.
+
+// Example:
+
+// Input:
+// Hello
+
+// h1:
+// Hello
+
+// Input:
+// JavaScript
+
+// h1:
+// JavaScript
+
+// Use:
+// - input event
+// - one event listener
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="input-field">
+    <h1 class="heading">Start Typing</h1>
+
+    <script>
+
+        let inputFeild = document.querySelector(".input-field");
+        let heading = document.querySelector(".heading");
+
+        inputFeild.addEventListener("input", () => {
+            heading.innerText = inputFeild.value;
+        })
+
+    </script>
+</body>
+
+</html>

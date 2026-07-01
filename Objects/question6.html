@@ -1,0 +1,55 @@
+<!--
+
+Task 6:
+Create an object named "student".
+
+The object should have:
+
+name: "Ali"
+age: 20
+course: "JavaScript"
+
+Perform the following actions:
+
+1. Print the student's name.
+2. Print the student's age.
+3. Update the course to "React JS".
+4. Add a new property:
+   city: "Lahore"
+5. Delete the age property.
+6. Check whether age exists in the object.
+7. Print the final object.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let student = {
+            name: "Ali",
+            age: 20,
+            course: "JavaScript",
+        }
+
+        console.log(student.name);
+        console.log(student.age);
+        student.course = "React JS";
+        student.city = "Lahore";
+        delete student.age;
+        console.log("age" in student);
+        console.log(student);
+    </script>
+</body>
+
+</html>

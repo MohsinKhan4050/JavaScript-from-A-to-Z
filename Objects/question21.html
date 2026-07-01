@@ -1,0 +1,68 @@
+<!--
+
+Task 21:
+
+Create an object named "employee".
+
+The object should have:
+
+name: "Ahmad"
+
+company: {
+    name: "ABC Tech",
+    city: "Karachi"
+}
+
+Perform these actions:
+
+1. Print the complete object.
+2. Print the company name.
+3. Update the company city to "Lahore".
+4. Print the updated city.
+5. Print the final object.
+
+Use:
+- Object literal {}
+- Nested object
+- Dot notation
+- Update nested property
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let employee = {
+            name: "Ahmad",
+            company: {
+                name: "ABC Tech",
+                city: "Karachi",
+            }
+        }
+
+        console.log(employee);
+
+        console.log(employee.company.name);
+
+        employee.company.city = "Lahore";
+
+        console.log(employee.company.city);
+
+        console.log(employee);
+        
+    </script>
+</body>
+
+</html>

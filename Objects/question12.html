@@ -1,0 +1,66 @@
+<!--
+
+Task 12:
+Create an object named "student".
+
+The object should have:
+
+name: "Mohsin"
+course: "JavaScript"
+
+Also add a method named "introduce".
+
+When the method is called, it should print:
+
+My name is Mohsin
+I am learning JavaScript
+
+IMPORTANT:
+Do not hardcode the values inside console.log().
+
+Use the object's properties inside the method.
+
+Perform the following actions:
+
+1. Print the complete object.
+2. Call the introduce method.
+
+Use:
+- Object literal {}
+- Method inside object
+- this keyword
+
+Hint:
+
+console.log(this.name);
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let student = {
+            ame: "Mohsin",
+            course: "JavaScript",
+            introduce: function () {
+                console.log("my name is", this.name, "\n", "i am leaning", this.course);
+            }
+        }
+
+        console.log(student);
+        student.introduce();
+
+
+    </script>
+</body>
+
+</html>

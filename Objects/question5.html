@@ -1,0 +1,61 @@
+<!--
+
+Task 5:
+Create an object named "mobile".
+
+The object should have:
+
+brand: "Samsung"
+model: "Galaxy A54"
+price: 120000
+
+Perform the following actions:
+
+1. Print the complete object.
+2. Add a new property:
+   color: "Black"
+3. Update the price to 110000.
+4. Delete the model property.
+5. Check whether the model property exists.
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Adding properties
+- Updating properties
+- delete operator
+- in operator
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let mobile = {
+            brand: "Samsung",
+            model: "Galaxy A54",
+            price: 120000,
+        }
+
+        console.log(mobile);
+        mobile.color = "Black";
+        mobile.price = 110000;
+        delete mobile.model;
+        console.log("model" in mobile);
+        console.log(mobile);
+
+    </script>
+</body>
+
+</html>

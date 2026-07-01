@@ -1,0 +1,72 @@
+<!--
+
+Task 14:
+Create an object named "calculator".
+
+The object should have one method:
+
+add
+
+The add method should accept two parameters:
+
+num1
+num2
+
+When called, it should print the sum of the two numbers.
+
+Perform the following actions:
+
+1. Print the complete object.
+2. Call the add method with:
+   10, 20
+
+3. Call the add method with:
+   50, 100
+
+Use:
+- Object literal {}
+- Methods
+- Function parameters
+
+Hint:
+
+add: function (num1, num2) {
+    console.log(num1 + num2);
+}
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let calculator = {
+
+            add: function (num1, num2) {
+                return num1 + num2
+
+            }
+        }
+
+
+        console.log(calculator);
+
+        let value1 = calculator.add(10, 20);
+        console.log(value1);
+
+        let value2 = calculator.add(50, 100)
+        console.log(value2)
+
+    </script>
+</body>
+
+</html>

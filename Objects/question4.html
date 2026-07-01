@@ -1,0 +1,77 @@
+<!--
+
+Task 4:
+Create an object named "employee".
+
+The object should have:
+
+name: "Ahmed"
+age: 25
+salary: 50000
+department: "IT"
+
+After creating the object:
+
+1. Print the complete object.
+2. Delete the "department" property.
+3. Print the updated object.
+4. Check whether "department" exists and print the result.
+
+Expected Output:
+
+{
+  name: "Ahmed",
+  age: 25,
+  salary: 50000,
+  department: "IT"
+}
+
+{
+  name: "Ahmed",
+  age: 25,
+  salary: 50000
+}
+
+false
+
+Use:
+- Object literal {}
+- delete operator
+- in operator
+
+Example:
+
+delete employee.department;
+
+console.log("department" in employee);
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let employee = {
+            name: "Ahmed",
+            age: 25,
+            salary: 50000,
+            department: "IT",
+        }
+
+        console.log(employee);
+        delete employee.department;
+        console.log(employee);
+        console.log("department" in employee);
+
+    </script>
+</body>
+
+</html>

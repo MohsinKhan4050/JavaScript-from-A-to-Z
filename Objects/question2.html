@@ -1,0 +1,59 @@
+<!--
+
+Task 2:
+Create an object named "car".
+
+The object should have:
+
+brand: "Toyota"
+model: "Corolla"
+year: 2020
+
+After creating the object:
+
+1. Print the complete object.
+2. Change the year from 2020 to 2024.
+3. Print the updated object.
+4. Print only the updated year.
+
+Expected Output:
+
+{ brand: "Toyota", model: "Corolla", year: 2020 }
+
+{ brand: "Toyota", model: "Corolla", year: 2024 }
+
+2024
+
+Use:
+- Object literal {}
+- Dot notation
+- Property update
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+        }
+
+        console.log(car);
+        let newYear = car.year = 2024;
+        console.log(car);
+        console.log(newYear);
+    </script>
+</body>
+
+</html>

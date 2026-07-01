@@ -1,0 +1,85 @@
+<!--
+
+// Task 30
+
+// Create:
+
+// 1 form
+// 1 text input
+// 1 submit button
+// 1 h1
+
+// h1 starts with:
+// "Please Login"
+
+// When the user clicks Submit:
+
+// 1. Stop the page from reloading.
+// 2. If the input is empty:
+//    Show:
+//    "Username is required"
+
+// 3. Otherwise:
+//    Show:
+//    "Welcome " + username
+
+// IMPORTANT:
+// Use:
+//
+// submit event
+// e.preventDefault()
+// e.target
+//
+// Hint:
+// You can get the input by selecting it,
+// or (later) we'll learn how to get it from the form itself.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" class="login-form">
+
+        <input type="text" class="input-box">
+
+        <button class="submit-btn" type="submit">Submit</button>
+
+        <h1 class="heading">Please Login</h1>
+    </form>
+
+    <script>
+
+        let loginForm = document.querySelector(".login-form");
+        let inputBox = document.querySelector(".input-box");
+        let heading = document.querySelector(".heading");
+
+        console.log(loginForm, inputBox, heading)
+
+        loginForm.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            if (inputBox.value.trim() === "") {
+                heading.innerText = "Username is required";
+            }
+
+            else {
+                heading.innerText = "Welcome  " + inputBox.value;
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

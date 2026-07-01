@@ -1,0 +1,70 @@
+<!--
+
+// Task 9:
+// Create one button and one h1.
+
+// The h1 should initially show:
+// "😊"
+
+// Now do this:
+
+// 1. Create an array:
+
+// ["😊", "😎", "😂", "😍", "🔥"]
+
+// 2. Add a click event on the button.
+
+// 3. Every click should:
+//    - Show the next emoji from the array.
+
+// Example:
+
+// Initial  → 😊
+// 1st click → 😎
+// 2nd click → 😂
+// 3rd click → 😍
+// 4th click → 🔥
+// 5th click → 😊
+// Then repeat...
+
+// 4. Use an array and a counter variable.
+// 5. Do NOT create multiple event listeners.
+// 6. Do NOT use a separate variable for each emoji.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">😊</h1>
+    <button class="btn" style="cursor: pointer;">change imoji</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let button = document.querySelector(".btn");
+
+        let emojiArray = ["😊", "😎", "😂", "😍", "🔥"];
+        let count = 1;
+
+        button.addEventListener("click", () => {
+            heading.innerText = emojiArray[count];
+            count++;
+            button.innerText = "Next Emoji"
+
+            if (count >= emojiArray.length) {
+                count = 0;
+                button.innerText = "Start Again"
+            }
+        })
+    </script>
+</body>
+
+</html>

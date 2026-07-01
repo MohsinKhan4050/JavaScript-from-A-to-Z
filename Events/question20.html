@@ -1,0 +1,70 @@
+<!--
+
+// Task 17:
+// Create one div.
+
+// The div should start with:
+// background: blue;
+
+// When the user DOUBLE-CLICKS the div:
+
+// First double click:
+//     background becomes green
+
+// Second double click:
+//     background becomes blue
+
+// Third double click:
+//     background becomes green
+
+// Fourth double click:
+//     background becomes blue
+
+// ...and so on.
+
+// Use:
+// - dblclick event
+// - one boolean variable
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script>
+        let div = document.querySelector(".box");
+
+        let isGreen = false;
+
+        div.addEventListener("dblclick", () => {
+
+            if (isGreen) {
+                div.style.background = "blue";
+                isGreen = false;
+            } else {
+                div.style.background = "green";
+                isGreen = true;
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!--
+
+// Task 6:
+// Create a box(div) and a button
+
+// Now do this:
+
+// 1. Select button and box
+
+// 2. Add click event on button
+
+// 3. When button is clicked:
+//    - If box background is white
+//      Change it to black
+//
+//    - If box background is black
+//      Change it to white
+
+// 4. Also change text color:
+//
+//    White background → Black text
+//    Black background → White text
+
+// 5. Box should contain text:
+//    "Light Mode"
+
+//    When black background comes:
+//    Change text to:
+//    "Dark Mode"
+
+// Rules:
+
+// - Use if / else
+// - Use style.backgroundColor
+// - Use style.color
+// - Use innerText
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="btn">Click me</button>
+
+
+    <script>
+        let div = document.querySelector('.box');
+        let button = document.querySelector(".btn");
+
+        div.innerText = "Light Mode";
+
+        let isDark = false;
+
+        button.addEventListener("click", () => {
+
+            if (isDark === false) {
+
+                div.innerText = "Dark Mode";
+                div.style.backgroundColor = "black";
+                div.style.color = "white";
+                isDark = true;
+            }
+            else {
+                div.innerText = "Light Mode";
+                div.style.backgroundColor = "white";
+                div.style.color = "black";
+                isDark = false;
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

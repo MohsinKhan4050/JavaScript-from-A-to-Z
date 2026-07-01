@@ -1,0 +1,85 @@
+<!--
+
+Task 18:
+Create an object named "student".
+
+The object should have:
+
+name: "Mohsin"
+marks: 75
+
+Add these three methods:
+
+addMarks(marks)
+deductMarks(marks)
+showMarks()
+
+Rules:
+
+1. addMarks(marks)
+   - Add the given marks to the current marks.
+
+2. deductMarks(marks)
+   - Subtract the given marks from the current marks.
+
+3. showMarks()
+   - Print:
+     Current Marks: <marks>
+
+Perform the following actions:
+
+1. Print the object.
+2. Add 15 marks.
+3. Deduct 10 marks.
+4. Add 20 marks.
+5. Call showMarks().
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Methods
+- Parameters
+- this keyword
+- Arithmetic operators
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let student = {
+            name: "Mohsin",
+            marks: 75,
+            addMarks: function (marks) {
+                this.marks += marks;
+
+            },
+            deductMarks: function (marks) {
+                this.marks -= marks;
+            },
+            showMarks: function () {
+                console.log("current Mark:", this.marks);
+            }
+        }
+
+        console.log(student);
+        student.addMarks(15);
+        student.deductMarks(10);
+        student.addMarks(20);
+        student.showMarks();
+        console.log(student);
+
+    </script>
+</body>
+
+</html>

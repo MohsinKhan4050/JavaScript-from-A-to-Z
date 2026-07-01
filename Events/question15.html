@@ -1,0 +1,85 @@
+<!--
+
+// Task 12:
+// Create one button and one h1.
+
+// The h1 should start with:
+// "Cat"
+
+// Create an array:
+
+// ["Cat", "Dog", "Lion", "Tiger"]
+
+// Every click should:
+// - Show the next animal name.
+
+// Also:
+
+// Cat   → blue color
+// Dog   → green color
+// Lion  → orange color
+// Tiger → purple color
+
+// After Tiger, start again from Cat.
+
+// Use:
+// - one array
+// - one counter
+// - one click event
+// - if / else if statements
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">Cat</h1>
+    <button class="btn">Change animals</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let button = document.querySelector(".btn");
+
+
+        let animalName = ["Cat", "Dog", "Lion", "Tiger"];
+        let count = 1;
+
+        button.addEventListener("click", () => {
+
+            heading.innerText = animalName[count];
+
+            if (animalName[count] === "Cat") {
+                heading.style.color = "blue";
+            }
+
+            else if (animalName[count] === "Dog") {
+                heading.style.color = "green";
+            }
+
+            else if (animalName[count] === "Lion") {
+                heading.style.color = "orange";
+            }
+
+            else if (animalName[count] === "Tiger") {
+                heading.style.color = "purple";
+            }
+            count++;
+
+            if (count >= animalName.length) {
+                count = 0;
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

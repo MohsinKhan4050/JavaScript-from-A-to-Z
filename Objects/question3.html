@@ -1,0 +1,71 @@
+<!--
+
+Task 3:
+Create an object named "book".
+
+The object should have:
+
+title: "JavaScript Basics"
+author: "John"
+pages: 150
+
+After creating the object:
+
+1. Print the complete object.
+2. Add a new property:
+   price: 500
+3. Print the updated object.
+4. Print only the price.
+
+Expected Output:
+
+{
+  title: "JavaScript Basics",
+  author: "John",
+  pages: 150
+}
+
+{
+  title: "JavaScript Basics",
+  author: "John",
+  pages: 150,
+  price: 500
+}
+
+500
+
+Use:
+- Object literal {}
+- Dot notation
+- Adding a new property
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let book = {
+            title: "JavaScript Basics",
+            author: "John",
+            pages: 150,
+        }
+
+        console.log(book);
+        book.price = 500;
+        console.log(book);
+        console.log(book.price)
+    </script>
+</body>
+
+</html>

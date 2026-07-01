@@ -1,0 +1,98 @@
+<!--
+
+// Task 10:
+// Create ONE button and ONE div.
+
+// The div should start with:
+// width: 100px;
+// height: 100px;
+// background: red;
+
+// Now do this:
+
+// 1. Create an array:
+
+// ["circle", "square"]
+
+// 2. When the button is clicked:
+
+// First click:
+//    div becomes a circle
+
+// Second click:
+//    div becomes a square
+
+// Third click:
+//    div becomes a circle
+
+// Fourth click:
+//    div becomes a square
+
+// ...and so on.
+
+// 3. Use:
+//    - an array
+//    - a counter variable
+//    - one click event
+
+// Hint:
+// Circle = border-radius: 50%
+// Square = border-radius: 0
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="btn">click me</button>
+
+    <script>
+
+        let box = document.querySelector(".box");
+        let button = document.querySelector(".btn");
+
+        let boxShape = ["circle", "square"];
+        let count = 0;
+
+        button.addEventListener("click", () => {
+
+            if (boxShape[count] === "circle") {
+                box.style.borderRadius = "50%";
+            }
+            else {
+                box.style.borderRadius = "0";
+            }
+            count++
+
+            if (count >= boxShape.length) {
+                count = 0;
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

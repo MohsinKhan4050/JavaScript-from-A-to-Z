@@ -1,0 +1,70 @@
+<!--
+
+// Task 2:
+// Create a button and an h1 using HTML.
+
+// Now do this:
+
+// 1. Select the button and the h1.
+// 2. Add a click event on the button.
+// 3. Every click should:
+//    - Increase a number by 1.
+//    - Display that number inside the h1.
+// 4. The h1 should start from 0.
+// 5. Example:
+//    First click  → 1
+//    Second click → 2
+//    Third click  → 3
+//    Fourth click → 4
+//    And so on...
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn {
+        cursor: pointer;
+    }
+
+    .heading {
+        width: 100px;
+        background: red;
+        text-align: center;
+        color: #fff;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+
+
+    <h1 class="heading">0</h1>
+    <button class="btn">Click me</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let button = document.querySelector(".btn");
+
+        let number = 0;
+
+
+        button.addEventListener("click", () => {
+
+            number++;
+            heading.innerText = number;
+
+        })
+
+    </script>
+
+</body>
+
+</html>

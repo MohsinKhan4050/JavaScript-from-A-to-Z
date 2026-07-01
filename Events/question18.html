@@ -1,0 +1,88 @@
+<!--
+
+// Task 15:
+// Create:
+
+// 1 button
+// 1 div
+
+// The div starts with:
+// width: 100px;
+// height: 100px;
+// background: red;
+
+// Create 3 arrays:
+
+// let colors = ["red", "blue", "green", "orange"];
+// let widths = ["100px", "150px", "200px", "250px"];
+// let radius = ["0", "10px", "20px", "50%"];
+
+// Every click should:
+
+// 1. Change the background color.
+// 2. Change the width.
+// 3. Change the border-radius.
+
+// Use the SAME counter for all 3 arrays.
+
+// After the last item,
+// start again from the beginning.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <button class="btn">Change State</button>
+
+    <script>
+
+        let div = document.querySelector(".box");
+        let btn = document.querySelector(".btn");
+
+        let colors = ["red", "blue", "green", "orange"];
+        let widths = ["100px", "150px", "200px", "250px"];
+        let radius = ["0", "10px", "20px", "50%"];
+
+        let count = 1;
+
+        btn.addEventListener("click", () => {
+
+            div.style.background = colors[count];
+            div.style.width = widths[count];
+            div.style.borderRadius = radius[count];
+            count++;
+
+            
+            if (count >= radius.length) {
+                count = 0;
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

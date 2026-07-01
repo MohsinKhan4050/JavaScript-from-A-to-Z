@@ -1,0 +1,65 @@
+<!--
+
+Task 8:
+Create an object named "product".
+
+The object should have:
+
+name: "Laptop"
+price: 80000
+stock: 15
+
+Perform the following actions:
+
+1. Print the product name.
+2. Print the stock.
+3. Increase the price by 5000.
+4. Add a new property:
+   brand: "Dell"
+5. Check whether brand exists.
+6. Check whether discount exists.
+7. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Property update using arithmetic
+- Adding properties
+- in operator
+
+Hint:
+
+price = price + 5000
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let product = {
+            name: "Laptop",
+            price: 80000,
+            stock: 15,
+        }
+
+        console.log(product.name);
+        console.log(product.stock);
+        product.price = product.price + 5000;
+        product.brand = "Dell";
+        console.log("brand" in product);
+        console.log("discount" in product);
+        console.log(product);
+    </script>
+</body>
+
+</html>

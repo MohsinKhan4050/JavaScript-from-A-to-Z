@@ -1,0 +1,56 @@
+<!--
+
+// Task 27
+
+// Create:
+
+// 1 form
+// 1 input
+// 1 submit button
+// 1 h1
+
+// The h1 should start with:
+// "Form Not Submitted"
+
+// When the form is submitted:
+
+// Change the h1 text to:
+// "Form Submitted"
+
+// Use:
+// - submit event
+
+// Don't worry if the page refreshes.
+// We'll fix that in the next lesson.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" class="inputField">
+        <button type="submit" class="submit-btn">Click me</button>
+        <h1 class="heading">Form Not Submitted</h1>
+    </form>
+
+    <script>
+        let form = document.querySelector("form");
+        let heading = document.querySelector(".heading");
+
+        form.addEventListener("submit", (e) => {
+            heading.innerText = "Form Submitted";
+            e.preventDefault();
+
+        })
+    </script>
+</body>
+
+</html>

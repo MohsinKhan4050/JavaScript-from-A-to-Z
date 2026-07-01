@@ -1,0 +1,57 @@
+<!--
+
+// Task 26:
+
+// Create:
+
+// 1 input
+// 1 h1
+
+// The h1 should start with:
+// "Click inside the input"
+
+// When the input gets focus:
+// - Change h1 text to "Input Focused"
+// - Change h1 color to green
+
+// When the input loses focus:
+// - Change h1 text to "Input Lost Focus"
+// - Change h1 color to red
+
+// Use:
+// - focus event
+// - blur event
+// - two event listeners
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="inputBox">
+    <h1 class="heading">Click inside the input</h1>
+
+    <script>
+        let inputFeild = document.querySelector(".inputBox");
+        let heading = document.querySelector(".heading");
+
+        inputFeild.addEventListener("focus", () => {
+            heading.innerText = "Input Focused";
+            heading.style.color = "green";
+        });
+
+        inputFeild.addEventListener("blur", () => {
+            heading.innerText = "Input Lost Focus";
+            heading.style.color = "red";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!--
+
+// Task 6:
+// Create one button and one h1.
+
+// Now do this:
+
+// 1. The h1 should initially show:
+//    "JavaScript"
+
+// 2. Create an array:
+
+// ["JavaScript", "HTML", "CSS", "React"]
+
+// 3. Add a click event on the button.
+
+// 4. Every click should:
+//    - Change the h1 text to the next item in the array.
+
+// Example:
+// First click  → "HTML"
+// Second click → "CSS"
+// Third click  → "React"
+// Fourth click → "JavaScript"
+// Then repeat again...
+
+// 5. Use an array and a counter variable.
+// 6. Do NOT use if-else statements more than once.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="heading">JavaScript</h1>
+    <button class="btn">Click me</button>
+
+    <script>
+
+        let heading = document.querySelector(".heading");
+        let btn = document.querySelector(".btn");
+        console.log(heading, btn)
+
+        let changeText = ["JavaScript", "HTML", "CSS", "React"];
+        let count = 1;
+
+        btn.addEventListener("click", () => {
+
+            heading.innerText = changeText[count];
+            count++;
+
+            if (count >= changeText.length) {
+                count = 0;
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!--
+
+Task 17:
+Create an object named "shoppingCart".
+
+The object should have:
+
+customer: "Mohsin"
+total: 0
+
+Add these three methods:
+
+addItem(price)
+removeItem(price)
+showTotal()
+
+Rules:
+
+1. addItem(price)
+   - Add the given price to total.
+
+2. removeItem(price)
+   - Subtract the given price from total.
+
+3. showTotal()
+   - Print:
+     Total Amount: <total>
+
+Perform the following actions:
+
+1. Print the object.
+2. Add an item worth 500.
+3. Add another item worth 1200.
+4. Remove an item worth 300.
+5. Call showTotal().
+6. Print the final object.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let shoppingCart = {
+            customer: "Mohsin",
+            total: 0,
+            addItem: function (price) {
+
+                this.total += price;
+            },
+
+            removeItem: function (price) {
+
+                this.total -= price;
+            },
+
+            showTotal: function () {
+                console.log("total amount:", this.total);
+            }
+        };
+
+        console.log(shoppingCart);
+        shoppingCart.addItem(500);
+        shoppingCart.addItem(1200);
+        shoppingCart.removeItem(300);
+        shoppingCart.showTotal();
+        console.log(shoppingCart)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!--
+
+Task 23:
+
+Create an object named "product".
+
+The object should have:
+
+name: "Laptop"
+brand: "Dell"
+price: 85000
+
+Use a for...in loop to:
+
+1. Print each property name (key).
+
+Do NOT print the values yet.
+
+Only print the keys.
+
+Example Output:
+
+name
+brand
+price
+
+Use:
+- Object literal {}
+- for...in loop
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let product = {
+
+            name: "Laptop",
+            brand: "Dell",
+            price: 85000,
+
+        }
+
+        for (let key in product){
+            console.log(key);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!--
+
+Task 9:
+Create an object named "movie".
+
+The object should have:
+
+title: "Inception"
+rating: 8.8
+year: 2010
+
+Perform the following actions:
+
+1. Print the title.
+2. Print the rating.
+3. Add a new property:
+   genre: "Sci-Fi"
+4. Update the rating by adding 0.2.
+5. Delete the year property.
+6. Check whether year exists.
+7. Check whether genre exists.
+8. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Adding properties
+- Updating properties using arithmetic
+- delete operator
+- in operator
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let movie = {
+            title: "Inception",
+            rating: 8.8,
+            year: 2010,
+        }
+        console.log(movie.title);
+        console.log(movie.rating);
+        movie.genre = "Sci-Fi";
+        movie.rating = movie.rating + 0.2;
+        delete movie.year;
+        console.log("year" in movie);
+        console.log("genre" in movie);
+        console.log(movie);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!--
+
+// Task 3:
+// Create an input field, button, and h2
+
+// Now do this:
+
+// 1. Select input, button, and h2
+
+// 2. Add click event on button
+
+// 3. When button is clicked:
+//    - Get value from input
+//    - Show value inside h2
+//
+// Example:
+//
+// Input: Mohsin
+// Output: Welcome Mohsin
+
+// 4. After clicking button:
+//    - Clear input field
+
+// 5. If input is empty:
+//    Show: "Please enter your name"
+
+// Rules:
+// - Use querySelector()
+// - Use addEventListener()
+// - Use .value to get input text
+// - Use innerText to update h2
+// - Do NOT use inline onclick
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="input-box">
+    <h2 class="heading"></h2>
+    <button class="btn">Click me</button>
+
+
+    <script>
+
+        let inputBox = document.querySelector(".input-box");
+        let button = document.querySelector(".btn");
+        let heading = document.querySelector(".heading");
+
+        button.addEventListener("click", () =>{
+
+            let userName=inputBox.value;
+
+            if(userName=== ""){
+                heading.innerText="Please enter your name";
+            }
+            else{
+                heading.innerText=`Welcome ${userName}`;
+            }
+            inputBox.value="";
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

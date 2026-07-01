@@ -1,0 +1,73 @@
+<!--
+
+// Task 7:
+// Create one button and one div.
+
+// Now do this:
+
+// 1. The div should have:
+//    width: 100px;
+//    height: 100px;
+//    background: red;
+
+// 2. When the button is clicked:
+//    - First click  → width: 150px
+//    - Second click → width: 200px
+//    - Third click  → width: 250px
+//    - Fourth click → width: 300px
+//    - Fifth click  → back to 100px
+
+// 3. Use an array and a counter variable.
+// 4. Do NOT use if-else statements for each width.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background: red;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button class="btn">Change Width</button>
+
+    <script>
+
+        let div = document.querySelector(".box");
+        let btn = document.querySelector(".btn");
+
+        let divWidth = ["100px", "150px", "200px", "250px", "300px"];
+        let count = 1;
+
+        btn.addEventListener("click", () => {
+
+            div.style.width = divWidth[count];
+            count++;
+
+            if (count >= divWidth.length) {
+                count = 0;
+            }
+
+        })
+    </script>
+</body>
+
+</html>

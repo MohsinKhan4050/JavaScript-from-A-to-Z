@@ -1,0 +1,58 @@
+<!--
+
+// Task 16:
+// Create a div.
+
+// When the mouse enters the div:
+// Change its color to green.
+
+// When the mouse leaves the div:
+// Change its color back to red.
+
+// Use:
+// - mouseenter event
+// - mouseleave event
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 120px;
+            height: 120px;
+            border: 1px solid red;
+            cursor: pointer;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+    <script>
+
+        let div = document.querySelector(".box");
+
+        div.addEventListener("mouseenter", () => {
+            div.style.backgroundColor = "green";
+        });
+
+        div.addEventListener("mouseleave", () => {
+            div.style.backgroundColor = "red";
+        });
+
+    </script>
+
+</body>
+
+</html>

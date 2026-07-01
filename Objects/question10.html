@@ -1,0 +1,59 @@
+<!--
+
+Task 10:
+Create an object named "bankAccount".
+
+The object should have:
+
+owner: "Ali"
+balance: 1000
+
+Perform the following actions:
+
+1. Print the balance.
+2. Deposit 500 into the account.
+3. Withdraw 200 from the account.
+4. Add a new property:
+   accountType: "Savings"
+5. Check whether accountType exists.
+6. Print the final object.
+
+Use:
+- Object literal {}
+- Dot notation
+- Property update using arithmetic
+- Adding properties
+- in operator
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let bankAccount = {
+            owner: "Ali",
+            balance: 1000,
+        }
+        console.log(bankAccount.balance);
+        bankAccount.balance += 500;
+        bankAccount.balance -= 200;
+        bankAccount.accountType = "Saving";
+        console.log("accountType" in bankAccount);
+        console.log(bankAccount);
+
+    </script>
+</body>
+
+</html>

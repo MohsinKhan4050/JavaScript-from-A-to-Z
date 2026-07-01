@@ -1,0 +1,69 @@
+<!--
+
+// Task 21:
+// Create:
+
+// 1 input
+// 1 h1
+
+// The h1 should start with:
+// "0 Characters"
+
+// When the user types:
+
+// If the input is empty:
+//     Show "0 Characters"
+
+// If the user types:
+// "Hello"
+// Show:
+// "5 Characters"
+
+// If the user types:
+// "JavaScript"
+// Show:
+// "10 Characters"
+
+// Use:
+// - input event
+// - .value
+// - .length
+// - one if statement
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="input-box">
+    <h1 class="heading">0 Characters</h1>
+
+    <script>
+
+        let inputFeild = document.querySelector(".input-box");
+        let heading = document.querySelector(".heading");
+
+        inputFeild.addEventListener("input", () => {
+            heading.innerText = inputFeild.value.length + " Characters";
+
+            if (inputFeild.value.length > 10) {
+                heading.style.color = "red";
+            }
+            else {
+                heading.style.color = "green";
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

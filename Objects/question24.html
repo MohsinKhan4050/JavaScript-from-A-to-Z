@@ -1,0 +1,57 @@
+<!--
+
+Task 24:
+
+Create an object named "student".
+
+The object should have:
+
+name: "Mohsin"
+age: 20
+course: "JavaScript"
+city: "Lahore"
+
+Use a for...in loop to print BOTH the key and the value.
+
+Example Output:
+
+name : Mohsin
+age : 20
+course : JavaScript
+city : Lahore
+
+Use:
+- Object literal {}
+- for...in loop
+- Bracket notation
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let student = {
+            name: "Mohsin",
+            age: 20,
+            course: "JavaScript",
+            city: "Lahore"
+        }
+
+        for (let key in student) {
+            console.log(key, ":", student[key])
+        }
+    </script>
+</body>
+
+</html>
