@@ -1,0 +1,39 @@
+<!-- You are creating a website for your college. Create a class User with 2 properties , name & email. it also has a method called viewData() that allows user to view website data. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class User {
+            constructor(name, email) {
+                this.name = name;
+                this.email = email;
+            }
+
+            viewData() {
+                console.log("Viewing website data...")
+            }
+        }
+
+        let user1 = new User("Mohsin", "mohsin@gmail.com");
+        let user2 = new User("Ali", "ali@gmail.com");
+
+        console.log(user1);
+
+        user1.viewData();
+        user2.viewData();
+    </script>
+</body>
+
+</html>
