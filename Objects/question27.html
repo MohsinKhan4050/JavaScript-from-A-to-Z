@@ -1,0 +1,60 @@
+<!--
+
+Task 27:
+
+Create an object named "movie".
+
+The object should have:
+
+title: "Inception"
+director: "Christopher Nolan"
+rating: 8.8
+
+Perform these actions:
+
+1. Print the complete object.
+2. Store Object.values(movie) inside a variable named "values".
+3. Print the "values" variable.
+4. Print the first value.
+5. Print the second value.
+6. Print the third value.
+
+Use:
+- Object literal {}
+- Object.values()
+- Array indexing
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let movie = {
+            title: "Inception",
+            director: "Christopher Nolan",
+            rating: 8.8,
+        }
+
+        console.log(movie);
+
+        let values = Object.values(movie);
+        console.log(values);
+
+        console.log("the first value is:", values[0]);
+        console.log("the second value is:", values[1]);
+        console.log("the third value is:", values[2]);
+
+    </script>
+</body>
+
+</html>
