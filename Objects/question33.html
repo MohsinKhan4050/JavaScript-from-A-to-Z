@@ -1,0 +1,151 @@
+<!--
+
+Final Challenge
+
+Create an object named "user".
+
+The object should have the following structure:
+
+id: 1
+name: "Mohsin"
+isLoggedIn: true
+
+skills:
+["HTML", "CSS", "JavaScript"]
+
+address:
+{
+    city: "Lahore",
+    country: "Pakistan"
+}
+
+projects:
+[
+    {
+        name: "Portfolio Website",
+        completed: true
+    },
+    {
+        name: "Todo App",
+        completed: false
+    }
+]
+
+--------------------------------------------
+
+Now perform these tasks:
+
+1. Print the complete user object.
+
+2. Print the user's name.
+
+3. Print the complete skills array.
+
+4. Print the last skill.
+
+5. Print the user's city.
+
+6. Print the country.
+
+7. Print the complete projects array.
+
+8. Print the name of the first project.
+
+9. Print whether the second project is completed.
+
+10. Add a new skill:
+"React"
+
+11. Change the city from
+"Lahore"
+to
+"Karachi"
+
+12. Change the second project's completed status to true.
+
+13. Print the updated user object.
+
+--------------------------------------------
+
+Use only the concepts you've learned:
+
+✓ Objects
+✓ Arrays
+✓ Nested Objects
+✓ Objects inside Arrays
+✓ Arrays inside Objects
+✓ Dot notation
+✓ Array indexing
+✓ push()
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let user = {
+
+            id: 1,
+            name: "Mohsin",
+            isLoggedIn: true,
+            skills: ["HTML", "CSS", "JavaScript"],
+
+            address: {
+                city: "Lahore",
+                country: "Pakistan",
+            },
+
+            projects: [
+
+                {
+                    name: "Portfolio Website",
+                    completed: true,
+                },
+
+                {
+                    name: "Todo App",
+                    completed: false,
+                }
+            ]
+        };
+
+        console.log(user);
+        console.log("The user name is:", user.name);
+        console.log("The user skills is:", user.skills);
+
+        console.log("the last skill of user is:", user.skills[user.skills.length - 1]) // i used this because use have a lot of skills so everytime configure of index in diffecult;
+
+        console.log(user.address.city);
+
+        console.log(user.projects);
+
+        console.log("the name of first project is:", user.projects[0].name);
+
+        console.log(user.projects[1].completed);
+
+        // add a new skill 
+        user.skills.push("React");
+
+        user.address.city = "Karachi";
+
+        user.projects[1].completed = true;
+
+        console.log(user)
+
+
+
+    </script>
+</body>
+
+</html>

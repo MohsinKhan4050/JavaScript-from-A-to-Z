@@ -1,0 +1,55 @@
+<!--
+
+Task 31:
+
+Create an object named "student".
+
+The object should have:
+
+name: "Ali"
+skills: ["HTML", "CSS"]
+
+Perform these actions:
+
+1. Print the complete object.
+2. Add "JavaScript" to the skills array.
+3. Add "React" to the skills array.
+4. Print the complete skills array.
+5. Print the total number of skills.
+
+Use:
+- Object literal {}
+- Array inside an object
+- push()
+- length
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let student={
+            name:"Ali",
+            skills:["HTML" , "CSS"],
+        }
+
+        console.log(student);
+
+        student.skills.push("JavaScript");
+        student.skills.push("React");
+
+        console.log(student.skills);
+        
+        console.log(student.skills.length)
+
+    </script>
+</body>
+</html>
